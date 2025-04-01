@@ -6,11 +6,19 @@ export default defineNuxtConfig({
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxthq/studio'
   ],
 
   devtools: {
     enabled: false
+  },
+  studio: {
+    gitInfo: {
+      name: 'ear-data-saas',
+      owner: 'Mars-99',
+      url: 'https://github.com/Mars-99/ear-data-saas.git'
+    }
   },
   appConfig: {
     link: {
