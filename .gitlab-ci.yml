@@ -1,0 +1,22 @@
+default:
+  image: gcr.io/k8s-skaffold/skaffold:v2.11.1-lts
+  tags:
+    - m1
+
+build:
+  stage: build
+  script:
+    - skaffold build --file-output=tags.json
+  artifacts:
+    paths:
+      - tags.json
+    expire_in: 1 week
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  script:
+    - skaffold deploy --build-artifacts=tags.json
+  only:
+    - main

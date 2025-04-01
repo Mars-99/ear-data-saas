@@ -1,0 +1,45 @@
+title: Ear-data
+description: Ear Data 更全面更具体的了解你的ASIN.
+hero:
+  title: 更全面更具体的了解你的[ASIN]{.text-yellow-500}
+  description: 为您提供全面实时的数据分析,精准的市场洞察,帮助您优化产品策略, 提升市场表现助力,让您的产品在竞争中脱颖而出！
+  links:
+    - label: 立即试用
+      trailing: true
+      color: warning
+      to: https://app.ear-data.com
+      target: _blank
+      size: xl
+    - label: Chrome 网上应用店
+      size: xl
+      color: neutral
+      to: https://chromewebstore.google.com/detail/eardata-%E4%BA%9A%E9%A9%AC%E9%80%8A%E5%8D%96%E5%AE%B6%E5%8A%A9%E6%89%8B/leamnhmoommgnllbfchimmjblecjgoad
+      target: _blank
+features:
+  title: ASIN流量关键词细化场景
+  description: 我们将深入探讨如何分析用户行为、挖掘长尾关键词，并将其与实际使用场景相结合，打造高转化率的关键词策略，助力您的ASIN在市场中脱颖而出。
+  items:
+    - title: 精确分析关键词近 14 天的展示位
+      description: 以关键词维度分析近14天的产品展示位，分析top10产品在排名总流量中的占比，帮助您看到产品与top10产品之间的差距
+    - title: 实时监控排名趋势
+      description: 每小时记录搜索某个关键词时，该产品的排名，帮助您实时追踪关键词的排名变化
+    - title: 深入分析关键词的结果
+      description: 展示ASIN的每月总销量和计算该ASIN自然展示得分等数据，通过详细的数据分析，您可以识别高效关键词，优化产品列表，提升转化率
+    - title: 我的竞品组
+      description: 轻松管理您的竞争产品，记录每一组添加的产品与竞品，助您快速回溯关键数据
+faq:
+  title: 常见问题
+  description: 其他用户也在关注这些问题
+  items:
+    - label: EarData 亚马逊卖家助手是什么?
+      content: EarData是一款为亚马逊卖家提供账号相关的各类数据集成和分析的插件，在您浏览商品的同时，为您自动展示库存、类别排名、品牌、跟卖、Review 等信息, 并提供一键导出到 Excel, 帮您客观高效的进行市场分析!
+    - label: 怎么安装插件？
+      content: 安装方式 https://www.yuque.com/eardata/help/yg5rns
+    - label: 怎么使用插件？
+      content: 安装完插件，在您浏览商品的同时，为您自动展示库存、类别排名、品牌、跟卖、Review 等信息, 并提供一键导出到 Excel, 帮您客观高效的进行市场分析!
+    - label: 为什么会加载失败？
+      content: 因为频繁的加载数据会导致 Amazon 对访问的IP进行短时间的屏蔽限制，您可以尝试更换 IP、清理缓存和 Cookie 来缓解该现象。
+    - label: 为什么导出数据不完整？
+      content: 首先要确定是不是加载失败造成的数据不完整，然后再看Listing加载是不是已经全都结束，因为访问的Listing过多，在获取数据时需要一定的处理时间，所以导出数据时需要确定页面上的数据是否全部加载完成，待全部加载完成后再导出数据即可。如果遇到导出数据为空白，可以停用一下其他同类插件，会有数据冲突导致加载失败的情况。
+
+
