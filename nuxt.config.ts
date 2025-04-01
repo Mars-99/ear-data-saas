@@ -6,21 +6,12 @@ export default defineNuxtConfig({
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-og-image',
+    'nuxt-og-image'
   ],
   devtools: {
     enabled: false
   },
   css: ['~/assets/css/main.css'],
-  appConfig: {
-    link: {
-      app: 'https://app.ear-data.com/'
-    }
-  },
-
-  routeRules: {
-    '/docs': { redirect: '/docs/quick-start', prerender: false }
-  },
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
@@ -29,7 +20,16 @@ export default defineNuxtConfig({
         owner: 'nuxt',
         url: 'https://github.com/Mars-99/ear-data-saas.git'
       }
-    },
+    }
+  },
+  appConfig: {
+    link: {
+      app: 'https://app.ear-data.com/'
+    }
+  },
+
+  routeRules: {
+    '/docs': { redirect: '/docs/quick-start', prerender: false }
   },
   future: {
     compatibilityVersion: 4
