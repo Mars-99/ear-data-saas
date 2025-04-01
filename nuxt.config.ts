@@ -16,8 +16,8 @@ export default defineNuxtConfig({
     preview: {
       api: 'https://api.nuxt.studio',
       gitInfo: {
-        name: 'content',
-        owner: 'nuxt',
+        name: 'Mars-99',
+        owner: 'main',
         url: 'https://github.com/Mars-99/ear-data-saas.git'
       }
     }
