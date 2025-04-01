@@ -39,7 +39,7 @@
         <div
           v-for="(item, index) in page.features.items"
           :id="`featuresId${index+1}`"
-          :key="item"
+          :key="index"
           class="w-full text-center"
         >
           <h2 class="text-xl !text-green-600">
