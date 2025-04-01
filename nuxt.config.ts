@@ -22,7 +22,16 @@ export default defineNuxtConfig({
   routeRules: {
     '/docs': { redirect: '/docs/quick-start', prerender: false }
   },
-
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'content',
+        owner: 'nuxt',
+        url: 'https://github.com/Mars-99/ear-data-saas.git'
+      }
+    },
+  },
   future: {
     compatibilityVersion: 4
   },
