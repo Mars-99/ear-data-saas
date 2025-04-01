@@ -9,23 +9,15 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     '@nuxthq/studio'
   ],
-
   devtools: {
     enabled: false
   },
-  studio: {
-    gitInfo: {
-      name: 'ear-data-saas',
-      owner: 'Mars-99',
-      url: 'https://github.com/Mars-99/ear-data-saas.git'
-    }
-  },
+  css: ['~/assets/css/main.css'],
   appConfig: {
     link: {
-      app: 'https://app.ear-data.com/',
-    },
+      app: 'https://app.ear-data.com/'
+    }
   },
-  css: ['~/assets/css/main.css'],
 
   routeRules: {
     '/docs': { redirect: '/docs/quick-start', prerender: false }

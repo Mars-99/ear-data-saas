@@ -3,7 +3,7 @@ import { defineCollection, z } from '@nuxt/content'
 const variantEnum = z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link'])
 const colorEnum = z.enum(['primary', 'secondary', 'neutral', 'error', 'warning', 'success', 'info'])
 const sizeEnum = z.enum(['xs', 'sm', 'md', 'lg', 'xl'])
-const orientationEnum = z.enum(['vertical', 'horizontal'])
+const _orientationEnum = z.enum(['vertical', 'horizontal'])
 
 const baseSchema = {
   title: z.string().nonempty(),
@@ -21,12 +21,12 @@ const linkSchema = z.object({
   variant: variantEnum.optional()
 })
 
-const imageSchema = z.object({
-  src: z.string().nonempty(),
-  alt: z.string().optional(),
-  loading: z.string().optional(),
-  srcset: z.string().optional()
-})
+// const imageSchema = z.object({
+//   src: z.string().nonempty(),
+//   alt: z.string().optional(),
+//   loading: z.string().optional(),
+//   srcset: z.string().optional()
+// })
 
 const featureItemSchema = z.object({
   ...baseSchema,
@@ -70,7 +70,7 @@ export const collections = {
       }),
       faq: sectionSchema.extend({
         items: z.array(collapsibleItemSchema)
-      }),
+      })
     })
-  }),
+  })
 }

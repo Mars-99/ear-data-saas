@@ -41,21 +41,21 @@ const links = [{
   label: '价格',
   to: '/#pricing'
 },
-  {
-    label: '用户好评',
-    to: '/#testimonials'
-  },
-  {
-    label: 'FAQ',
-    to: '/#faq'
-  }]
+{
+  label: '用户好评',
+  to: '/#testimonials'
+},
+{
+  label: 'FAQ',
+  to: '/#faq'
+}]
 
 provide('navigation', navigation)
 </script>
 
 <template>
   <UApp>
-<!--    <NuxtLoadingIndicator />-->
+    <!--    <NuxtLoadingIndicator /> -->
 
     <NuxtLayout>
       <NuxtPage />

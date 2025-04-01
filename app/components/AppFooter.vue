@@ -1,11 +1,14 @@
 <template>
-  <USeparator class="h-px"/>
+  <USeparator class="h-px" />
   <UFooter :ui="{ top: 'border-b border-(--ui-border)' }">
     <template #top>
       <UContainer>
         <UFooterColumns :columns="columns">
           <template #right>
-            <img class="w-full" :src="images"/>
+            <img
+              class="w-full"
+              :src="images"
+            >
           </template>
         </UFooterColumns>
       </UContainer>
@@ -18,8 +21,10 @@
     </template>
   </UFooter>
 </template>
+
 <script setup lang="ts">
-import images from '~/assets/images/QRcode.png';
+import images from '~/assets/images/QRcode.png'
+
 const columns = [{
   label: '产品',
   children: [{
@@ -58,14 +63,12 @@ const columns = [{
     target: '_blank'
   }]
 },
-  {
-    label: '其他',
-    children: [{
-      label: '用户支持',
-    }, {
-      label: 'support@ear-data.com',
-    }]
+{
+  label: '其他',
+  children: [{
+    label: '用户支持'
+  }, {
+    label: 'support@ear-data.com'
   }]
-
+}]
 </script>
-

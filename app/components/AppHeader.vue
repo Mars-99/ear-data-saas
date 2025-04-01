@@ -2,7 +2,11 @@
   <UHeader>
     <template #left>
       <NuxtLink to="/">
-        <img alt="Company Logo" class="w-14 mr-4" :src="logo"/>
+        <img
+          alt="Company Logo"
+          class="w-14 mr-4"
+          :src="logo"
+        >
       </NuxtLink>
     </template>
 
@@ -27,43 +31,45 @@
         class="-mx-2.5"
       />
       <UButton
-          :to="ac.link.app"
-          class="mt-4"
-          label="登陆"
-          variant="subtle"
-          block
+        :to="ac.link.app"
+        class="mt-4"
+        label="登陆"
+        variant="subtle"
+        block
       />
     </template>
   </UHeader>
 </template>
+
 <script setup lang="ts">
+import logo from '~/assets/images/logo.png'
+
 const nuxtApp = useNuxtApp()
-const ac = useAppConfig();
+const ac = useAppConfig()
 const route = useRoute()
-const { activeHeadings, updateHeadings } = useScrollspy()
-import logo from '~/assets/images/logo.png';
+const { updateHeadings } = useScrollspy()
 const items = computed(() => [
   {
     label: '帮助中心',
     to: '/docs',
     active: route.path.startsWith('/docs')
-  },{
-  label: '功能',
-  to: '/#features',
-  active: route.hash.startsWith('#features'),
-}, {
-  label: '价格',
-  to: '/#pricing',
-    active: route.hash.startsWith('#pricing'),
-}, {
-  label: '用户好评',
-  to: '/#testimonials',
-    active: route.hash.startsWith('#testimonials'),
-}, {
-  label: 'FAQ',
-  to: '/#faq',
-    active: route.hash.startsWith('#faq'),
-}])
+  }, {
+    label: '功能',
+    to: '/#features',
+    active: route.hash.startsWith('#features')
+  }, {
+    label: '价格',
+    to: '/#pricing',
+    active: route.hash.startsWith('#pricing')
+  }, {
+    label: '用户好评',
+    to: '/#testimonials',
+    active: route.hash.startsWith('#testimonials')
+  }, {
+    label: 'FAQ',
+    to: '/#faq',
+    active: route.hash.startsWith('#faq')
+  }])
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([

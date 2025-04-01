@@ -16,7 +16,10 @@
           class="*:leading-11 sm:*:leading-19 max-w-3xl mx-auto"
         />
       </template>
-      <img :src="heroImages" class="hidden lg:block  left-0 w-full max-w-xl"/>
+      <img
+        :src="heroImages"
+        class="hidden lg:block  left-0 w-full max-w-xl"
+      >
     </UPageHero>
     <UNavigationMenu
       v-if="pageCont.isFixed"
@@ -33,25 +36,39 @@
       class="relative overflow-hidden"
     >
       <template #features>
-        <div :id="`featuresId${index+1}`" class="w-full text-center" v-for="(item, index) in page.features.items">
-          <h2 class="text-xl !text-green-600">{{item.title}}</h2>
-          <p>{{item.description}}</p>
+        <div
+          v-for="(item, index) in page.features.items"
+          :id="`featuresId${index+1}`"
+          :key="item"
+          class="w-full text-center"
+        >
+          <h2 class="text-xl !text-green-600">
+            {{ item.title }}
+          </h2>
+          <p>{{ item.description }}</p>
           <div class="w-full bg-gray-100 rounded-xl p-4 my-4">
-            <video width="100%" controls autoplay loop muted>
-              <source :src="pageCont.videos[index]" type="video/mp4">
+            <video
+              width="100%"
+              controls
+              autoplay
+              loop
+              muted
+            >
+              <source
+                :src="pageCont.videos[index]"
+                type="video/mp4"
+              >
             </video>
           </div>
-
         </div>
       </template>
     </UPageSection>
-
 
     <UPageSection
       id="faq"
       :title="page.faq.title"
       :description="page.faq.description"
-      :ui="{ features: 'sm:grid-cols-1 lg:grid-cols-1', title:'text-white', description:'text-emerald-300'  }"
+      :ui="{ features: 'sm:grid-cols-1 lg:grid-cols-1', title: 'text-white', description: 'text-emerald-300' }"
       class="relative overflow-hidden question-box bg-emerald-600 !text-white"
     >
       <template #headline>
@@ -62,19 +79,22 @@
         />
       </template>
       <template #features>
-        <UAccordion :collapsible="false" :items="page.faq.items" />
+        <UAccordion
+          :collapsible="false"
+          :items="page.faq.items"
+        />
       </template>
     </UPageSection>
-
-
   </UPage>
 </template>
+
 <script setup lang="ts">
-import heroImages from '@/assets/images/banner-icon-img.png';
-import keywords from '@/assets/images/keywords.mp4';
-import monitorRank from '@/assets/images/monitor-rank.mp4';
-import keywordAsin from '@/assets/images/keyword-asin.mp4';
-import competitiveGroup from '@/assets/images/competitive-group.mp4';
+import heroImages from '@/assets/images/banner-icon-img.png'
+import keywords from '@/assets/images/keywords.mp4'
+import monitorRank from '@/assets/images/monitor-rank.mp4'
+import keywordAsin from '@/assets/images/keyword-asin.mp4'
+import competitiveGroup from '@/assets/images/competitive-group.mp4'
+
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 const { data: page } = await useAsyncData('index', () => queryCollection('content').first())
@@ -83,7 +103,7 @@ if (!page.value) {
 }
 const pageCont = reactive({
   isFixed: false,
-  videos:[keywords,monitorRank,keywordAsin,competitiveGroup ]
+  videos: [keywords, monitorRank, keywordAsin, competitiveGroup]
 })
 const featureLinks = computed(() => [{
   label: '关键词近14天展示位',
@@ -115,17 +135,16 @@ useSeoMeta({
 
 // 监听滚动事件
 function handleScroll() {
-  pageCont.isFixed = window.scrollY > 600 && window.scrollY<3500;
+  pageCont.isFixed = window.scrollY > 600 && window.scrollY < 3500
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
+  window.addEventListener('scroll', handleScroll)
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
-
+  window.removeEventListener('scroll', handleScroll)
+})
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
@@ -137,6 +156,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
   ].filter(Boolean) as Element[])
 })
 </script>
+
 <style scoped>
 .page-hero-bg{
   background-image: url("@/assets/images/banner-img.jpg");
