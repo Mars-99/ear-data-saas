@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    '@nuxthq/studio'
   ],
   devtools: {
     enabled: false
