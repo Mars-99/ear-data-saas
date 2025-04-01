@@ -27,8 +27,8 @@ export default defineNuxtConfig({
       app: 'https://app.ear-data.com/'
     }
   },
-
   routeRules: {
+    '/': { prerender: true },
     '/docs': { redirect: '/docs/quick-start', prerender: false }
   },
   future: {
